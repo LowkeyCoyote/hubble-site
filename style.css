@@ -1,0 +1,513 @@
+:root {
+    --pink : hsl(322, 100%, 66%);
+    --pale-cyan : hsl(193, 100%, 96%);
+    --dark-cyan : hsl(192, 100%, 9%);
+    --greyish-blue : hsl(210, 14%, 80%);
+}
+
+/* Reset */
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+ol, ul {
+    list-style: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Base Style */
+
+body{
+    background-color: white;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark-cyan);
+}
+
+main {
+    display: grid;
+}
+
+.button{
+    border: 1px solid transparent;
+    padding: 15px;
+    border-radius: 999px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.button-light{
+    background-color: white;
+    box-shadow: 0 3px 8px 3px #d9dee5;
+    width: 180px;
+}
+
+.button-pink{
+    color: white;
+    background-color: var(--pink);
+    width: 250px;
+}
+
+.button-pink:hover{
+    opacity: 0.6;
+    transition: all 0.1s ease-in-out;
+}
+
+.button-light:hover{
+    opacity: 0.9;
+    transition: all 0.1s ease-in-out;
+}
+
+h2{
+    font-size: 45px;
+    font-weight: bold;
+}
+
+/* Header */
+
+.hero{
+    height: 90vh;
+    background-color: var(--pale-cyan);
+    background-image: url("images/bg-hero-desktop.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    margin: 50px 80px 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-header{
+    display: grid;
+    width: 1280px;
+    margin: 0 auto;
+    grid-template-columns: 520px 760px;
+    grid-template-rows: 800px;
+    align-items: center;
+}
+
+.container-header h2{
+    margin-bottom: 30px;
+}
+.container-header p{
+    line-height: 1.5;
+}
+.container-header .button{
+    margin-top: 40px;
+}
+.header-illustration{
+    margin-bottom: 130px;
+    text-align: right;
+}
+
+.presentation{
+    margin-bottom: 100px;
+}
+
+.header-illustration img{
+    max-width: 90%;
+}
+
+@media (max-width: 1400px) {
+    header{
+        width: 900px;
+        margin: 50px auto 0 auto ;
+    }
+    .container-header{
+        width: 900px;
+        grid-template-columns: 380px 520px;
+    }
+    .hero{
+        height: 75vh;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    header{
+        width: 700px;
+    }
+    .container-header{
+        width: 700px;
+        grid-template-columns: 300px 400px;
+    }
+    .hero{
+        height: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero{
+        background-image: url("images/bg-hero-mobile.svg");
+        margin: 0;
+        max-width: 100vw;
+        height: 100vh;
+    }
+
+    .container-header{
+        display: flex;
+        width: 360px;
+        margin: 40px auto 0 auto;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container-header h2{
+        font-size: 22px;
+    }
+    .container-header p{
+        font-size: 14px;
+    }
+    header{
+        width: 340px;
+        margin-top: 20px;
+    }
+
+    .header-illustration{
+        margin: 50px 20px 50px 0;
+    }
+
+    .logo-header{
+        max-width: 110px;
+        margin: 0;
+    }
+
+    .presentation{
+        margin: 40px auto 10px auto;
+        width: 265px;
+    }
+
+    .button-light{
+        font-size: 13px;
+        width: 100px;
+        padding: 5px
+    }
+
+    .button-pink{
+        width: 200px;
+        margin: 30px auto 0 auto;
+        padding: 8px;
+        font-size: 13px;
+    }
+}
+
+/* Main */
+
+.main-sections{
+    width: 100vw;
+    background-color: white;
+    padding: 100px 0;
+    position: relative;
+    margin: 40px auto 250px auto;
+}
+
+.container{
+    height: 450px;
+    width: 1100px;
+    margin: 35px auto;
+    border: 2px solid rgba(248, 245, 245, 0.93);
+    box-shadow: 0 0 10px 3px #f2f5f8;
+    border-radius: 10px;
+    padding: 10px 25px 10px 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-text{
+    width: 740px;
+}
+
+.container-text h3{
+    margin-bottom: 15px;
+}
+.container-text p{
+    color: grey;
+    line-height: 1.5
+}
+
+.container-img img{
+    max-height: 100%;
+    max-width: 72%;
+}
+.img-right{
+    text-align: right;
+}
+.img-left{
+    text-align: left;
+}
+
+.container h3{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.absolute-container{
+    position: absolute;
+    bottom: -22%;
+    right: 50%;
+    margin-right: -400px;
+    width: 800px;
+    height: 240px;
+    background-color: white;
+    border-radius: 15px;
+    border: 2px solid rgba(248, 245, 245, 0.93);
+    box-shadow: 0 0 5px 3px #f2f5f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.absolute-container h3{
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.absolute-container .button-pink{
+    width: 280px;
+}
+
+
+@media (max-width: 1400px){
+    .container{
+        width: 800px;
+        height: 400px;
+    }
+
+    .container-text{
+        width: 540px;
+    }
+    .absolute-container{
+        bottom: -25%;
+        width: 650px;
+        height: 200px;
+        margin-right: -325px;
+    }
+}
+
+@media (max-width: 1024px){
+    .container{
+        width: 700px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 800px){
+
+    .main-sections{
+        margin: 0 0 100px 0;
+        padding: 30px 0;
+    }
+    .container{
+        width: 300px;
+        height: 410px;
+        flex-direction: column;
+        padding: 60px 20px;
+    }
+    .container-text{
+        width: 280px;
+        text-align: center;
+    }
+    .container-text h3{
+        font-size: 22px;
+    }
+    .container-text p{
+        font-size: 14px;
+    }
+    .container-img img{
+        max-height: 100%;
+        max-width: 90%;
+    }
+    .absolute-container{
+        width: 350px;
+        height: 170px;
+        margin-right: -176px;
+        bottom: -12%;
+        text-align: center;
+    }
+    .absolute-container h3{
+        font-size: 19px;
+        margin-bottom: 0;
+    }
+
+    .absolute-container .button-pink{
+        width: 210px;
+        padding: 14px;
+    }
+
+    .one{
+        order: 2;
+    }
+    .two{
+        order: 1;
+    }
+}
+/* Footer */
+
+footer{
+    height: 600px;
+    background-color: var(--dark-cyan);
+    padding-left: 150px;
+    font-size: 15px;
+    margin: 60px auto 0 auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container-footer{
+    margin: 0 auto;
+}
+
+.top{
+    margin-top: 170px;
+}
+
+.grid-footer{
+    display: grid;
+    margin-top: 40px;
+    width: 1200px;
+    height: 200px;
+    grid-template-columns: 400px 250px 250px 300px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-right: 50px;
+}
+
+.row-contact{
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.icon-contact{
+    margin-right: 20px;
+    margin-top: 3px;
+}
+
+.row-contact img{
+    max-width: none;
+}
+
+.column-link{
+    text-align: left;
+}
+.nav-links{
+    margin-left: 80px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+.nav-links li{
+    margin-bottom: 15px;
+}
+
+.social-icon{
+    margin-left: 30px;
+}
+
+.social-icon img{
+    max-width: 18px;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 999px;
+    padding: 7px;
+    margin-right: 5px;
+}
+
+.copyright{
+    color: white;
+    font-size: 12px;
+    text-align: right;
+    margin: 10px 265px 30px 0;
+}
+
+@media (max-width: 1024px){
+
+    footer{
+        margin: 40px auto 0 auto;
+        padding-left: 100px;
+    }
+
+    .grid-footer{
+        display: grid;
+        margin-top: 40px;
+        width: 750px;
+        height: 300px;
+        grid-template-columns: 300px 138px 138px 175px;
+    }
+
+    .nav-links{
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .container-footer{
+        width: 320px;
+    }
+    footer{
+        padding: 0;
+        height: 750px;
+    }
+
+    .grid-footer{
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        height: 540px;
+        margin: 0 auto;
+    }
+
+    .nav-links{
+        margin-left: 0;
+    }
+
+    .logo-brand{
+        margin-top: 120px;
+        margin-bottom: 20px;
+        max-width: 170px;
+    }
+
+    .contact{
+        margin-bottom: 40px;
+        margin-right: 0;
+    }
+
+    .social-icon{
+        margin: 30px auto 0 auto;
+    }
+
+    .copyright{
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+}
+
+
+
+
+
+
